@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* html {
+    font-family: "Mona Sans", sans-serif;
+  } */
+  section {
+    @apply py-[75px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] px-28 mx-auto;
+  }
+  .container-carousel {
+    @apply max-w-full w-[1440px] px-40 mx-auto;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    @apply w-full px-7;
+  }
+  .container-carousel {
+    @apply w-full px-16;
+  }
+  section {
+    @apply py-[35px];
+  }
+}
