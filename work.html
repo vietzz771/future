@@ -6,14 +6,44 @@
     <link href="styles/output.css" rel="stylesheet" />
     <link href="styles/custom.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Future Studio</title>
   </head>
   <body>
-    <nav>
-      <div class="mx-auto max-w-full w-[1440px] px-5 sm:px-5 lg:px-5">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white">
+      <div class="mx-auto max-w-full px-5 sm:px-5 lg:px-16">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-8 w-auto ml-11 sm:ml-0"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a
+                  href="./"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
+                  >Dashboard</a
+                >
+                <a
+                  href="./work"
+                  class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
+                  >Work</a
+                >
+                <a
+                  href="./about"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
+                  >About</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center sm:hidden">
             <!-- Mobile menu button -->
             <button
               type="button"
@@ -22,10 +52,9 @@
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <span class="absolute -inset-0.5"></span>
               <span class="sr-only">Open main menu</span>
               <svg
-                class="block h-6 w-6"
+                class="block h-6 w-6 menu-icon"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -34,221 +63,245 @@
               >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
-              <svg
-                class="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg class="hidden h-6 w-6 close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
           </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center">
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <a href="#" class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white" aria-current="page"
-                  >Dashboard</a
-                >
-                <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Team</a
-                >
-                <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Projects</a
-                >
-                <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Calendar</a
-                >
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="hidden sm:hidden border-t-2" id="mobile-menu">
         <div class="space-y-1 px-5 pb-3 pt-2">
-          <a href="#" class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white" aria-current="page"
+          <a
+            href="./"
+            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
             >Dashboard</a
           >
           <a
-            href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Team</a
+            href="./work"
+            class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
+            >Work</a
           >
           <a
-            href="#"
+            href="./about"
             class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Projects</a
-          >
-          <a
-            href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Calendar</a
+            >About</a
           >
         </div>
       </div>
     </nav>
-    <section>
-      <div class="container">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
-          <div class="image-container rounded-lg">
-            <img
-              src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
-              alt=""
-              class="rounded-lg cursor-pointer"
-            />
-            <div class="image-title">Control Center</div>
-          </div>
-          <div class="image-container rounded-lg">
-            <img
-              src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
-              alt=""
-              class="rounded-lg cursor-pointer"
-            />
-            <div class="image-title">Mug Shot</div>
-          </div>
-          <div class="image-container rounded-lg">
-            <img
-              src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
-              alt=""
-              class="rounded-lg cursor-pointer"
-            />
-            <div class="image-title">Off the grid</div>
-          </div>
-          <div class="image-container rounded-lg">
-            <img
-              src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
-              alt=""
-              class="rounded-lg cursor-pointer"
-            />
-            <div class="image-title">Neat</div>
+    <div id="overlay">
+      <section class="pt-[99px] xl:pt-[139px]">
+        <div class="container">
+          <div id="gallery-wrap-work" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Control Center</div>
+            </div>
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Mug Shot</div>
+            </div>
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Off the grid</div>
+            </div>
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Neat</div>
+            </div>
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/14693870/file/original-4cc056c9a4b905793a568a232bc154d7.png?resize=1200x9000"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/14693870/file/original-4cc056c9a4b905793a568a232bc154d7.png?resize=1200x900"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Spell</div>
+            </div>
+            <div class="image-container rounded-lg">
+              <a
+                data-fancybox="gallery"
+                data-src="https://cdn.dribbble.com/userupload/12831495/file/original-46b46cdabd610550bf5554b96dfbcd21.png?resize=1200x900"
+              >
+                <img
+                  src="https://cdn.dribbble.com/userupload/12831495/file/original-46b46cdabd610550bf5554b96dfbcd21.png?resize=1200x900"
+                  alt=""
+                  class="rounded-lg cursor-pointer"
+                />
+              </a>
+              <div class="image-title">Polka Drawer</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="pt-[75px] pb-[35px]">
-      <div class="container">
-        <div>
-          <div class="flex justify-between items-center">
-            <div class="flex-1">
-              <div>
-                <ul class="mt-6">
-                  <li class="font-normal hover:font-semibold cursor-pointer">Dashboard</li>
-                  <li class="font-normal hover:font-semibold cursor-pointer">Team</li>
-                  <li class="font-normal hover:font-semibold cursor-pointer">Project</li>
-                  <li class="font-normal hover:font-semibold cursor-pointer">Calender</li>
-                </ul>
-              </div>
-            </div>
+      </section>
+      <footer>
+        <section class="pt-[35px] pb-[15px] sm:py-[35px]">
+          <div class="container">
             <div>
-              <div class="h-32 w-32">
-                <img
-                  src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="flex-1">
-              <div>
-                <ul class="flex gap-x-3 justify-end">
-                  <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
-                    <svg
-                      fill="#000000"
-                      version="1.1"
-                      id="Shopicons"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      viewBox="0 0 48 48"
-                      xml:space="preserve"
-                      class="p-2"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <style type="text/css">
-                          .st0 {
-                            fill: none;
-                          }
-                        </style>
-                        <g>
-                          <path class="st0" d="M0,0h48v48H0V0z"></path>
-                          <path
-                            d="M36,4H12c-4.4,0-8,3.6-8,8v24c0,4.4,3.6,8,8,8h24c4.4,0,8-3.6,8-8V12C44,7.6,40.4,4,36,4z M24,34c-5.5,0-10-4.5-10-10 s4.5-10,10-10s10,4.5,10,10S29.5,34,24,34z M35,15c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2C37,14.1,36.1,15,35,15z"
-                          ></path>
-                        </g>
-                      </g>
-                    </svg>
-                  </li>
-                  <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
-                    <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="p-1">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
-                        ></path>
-                      </g>
-                    </svg>
-                  </li>
-                  <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
-                    <svg
-                      viewBox="0 -2 20 20"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      fill="#000000"
-                      class="p-2"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <title>twitter [#154]</title>
-                        <desc>Created with Sketch.</desc>
-                        <defs></defs>
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#000000">
-                            <g id="icons" transform="translate(56.000000, 160.000000)">
+              <div class="flex justify-between items-center flex-col sm:flex-row">
+                <div>
+                  <div class="h-32 w-32">
+                    <img
+                      src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <ul class="flex gap-10 items-center">
+                      <li class="font-semibold hover:text-slate-500"><a href="./">Dashboard</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./work">Work</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./about">About</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mt-4 sm:mt-0">
+                  <div>
+                    <ul class="flex gap-x-3 justify-end">
+                      <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
+                        <svg
+                          fill="#000000"
+                          version="1.1"
+                          id="Shopicons"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 48 48"
+                          xml:space="preserve"
+                          class="p-2"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: none;
+                              }
+                            </style>
+                            <g>
+                              <path class="st0" d="M0,0h48v48H0V0z"></path>
                               <path
-                                d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
-                                id="twitter-[#154]"
+                                d="M36,4H12c-4.4,0-8,3.6-8,8v24c0,4.4,3.6,8,8,8h24c4.4,0,8-3.6,8-8V12C44,7.6,40.4,4,36,4z M24,34c-5.5,0-10-4.5-10-10 s4.5-10,10-10s10,4.5,10,10S29.5,34,24,34z M35,15c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2C37,14.1,36.1,15,35,15z"
                               ></path>
                             </g>
                           </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </li>
-                </ul>
+                        </svg>
+                      </li>
+                      <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
+                        <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="p-1">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </li>
+                      <li class="h-10 w-10 rounded-full border-slate-100 hover:bg-gray-200 cursor-pointer border-2">
+                        <svg
+                          viewBox="0 -2 20 20"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          fill="#000000"
+                          class="p-2"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <title>twitter [#154]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-60.000000, -7521.000000)"
+                                fill="#000000"
+                              >
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                  <path
+                                    d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
+                                    id="twitter-[#154]"
+                                  ></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 border-t-2 mt-3 sm:mt-0"></div>
+              <div class="mt-5 flex justify-between items-center flex-col sm:flex-row">
+                <p class="text-slate-500">&copy;&nbsp;<span id="year"></span> Future Studio. All rights reserved.</p>
+                <div class="flex justify-between items-center gap-x-6 text-slate-500 mt-3 sm:mt-0">
+                  <p>Hello@futurestudio.com</p>
+                  <p>+84 971356722</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="flex-1 border-t-2 mt-5"></div>
-          <div class="mt-5 flex justify-between items-center flex-col sm:flex-row">
-            <p class="text-slate-500">&copy;&nbsp;<span id="year"></span> Future Studio. All rights reserved.</p>
-            <div class="flex justify-between items-center gap-x-6 text-slate-500 mt-3 sm:mt-0">
-              <p>Hello@futurestudio.com</p>
-              <p>+84 971356722</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+        </section>
+      </footer>
+    </div>
     <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind(document.getElementById("gallery-wrap-work"), "[data-fancybox]", {
+        wheel: "slide",
+      });
+    </script>
   </body>
 </html>

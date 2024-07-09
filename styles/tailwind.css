@@ -31,3 +31,8 @@
     @apply py-[35px];
   }
 }
+@media only screen and (max-width: 768px) {
+  .container-carousel {
+    @apply w-full px-7;
+  }
+}
