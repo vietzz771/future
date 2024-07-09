@@ -651,10 +651,6 @@ section {
   inset: -0px;
 }
 
-.-inset-0\.5 {
-  inset: -0.125rem;
-}
-
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -1349,10 +1345,6 @@ section {
   padding-bottom: 15px;
 }
 
-.pb-\[35px\] {
-  padding-bottom: 35px;
-}
-
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -1379,14 +1371,6 @@ section {
 
 .pt-\[35px\] {
   padding-top: 35px;
-}
-
-.pt-\[75px\] {
-  padding-top: 75px;
-}
-
-.pt-\[64px\] {
-  padding-top: 64px;
 }
 
 .pt-\[99px\] {
@@ -1568,6 +1552,10 @@ section {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.hover\:font-semibold:hover {
+  font-weight: 600;
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1654,11 +1642,6 @@ section {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
-  .md\:px-\[200px\] {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1669,16 +1652,6 @@ section {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .lg\:px-\[200px\] {
-    padding-left: 200px;
-    padding-right: 200px;
   }
 
   .lg\:px-\[150px\] {
