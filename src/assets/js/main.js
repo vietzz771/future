@@ -24,16 +24,13 @@ projectsContainer.addEventListener("click", (event) => {
 });
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 2000,
-  delay: 200,
+document.addEventListener("DOMContentLoaded", () => {
+  const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2000,
+    delay: 200,
+  });
+  sr.reveal(".main-text, .info");
+  sr.reveal(".img-list .image-container", { interval: 100 });
 });
-sr.reveal(".main-text .info", {
-  delay: 200,
-});
-sr.reveal(".img-list ", { delay: 200 });
-sr.reveal(".image-container", {delay: 100});
-sr.reveal(".main-text, .info", { delay: 200 });
-sr.reveal(".img-list, .image-container", { interval: 100 });

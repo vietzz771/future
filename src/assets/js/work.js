@@ -29,15 +29,12 @@ if (selectedProject) {
 
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 2000,
-  delay: 200,
+document.addEventListener("DOMContentLoaded", () => {
+  const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2000,
+    delay: 200,
+  });
+  sr.reveal(".project-details-container, .image-container", { interval: 100 });
 });
-sr.reveal(".title-text", {
-  delay: 200,
-});
-sr.reveal(".project-details-container", { delay: 200 });
-sr.reveal(".image-container", {delay: 100});
-sr.reveal(".project-details-container, .image-container", { interval: 100 });
