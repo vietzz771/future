@@ -24,16 +24,6 @@ projectsContainer.addEventListener("click", (event) => {
 });
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-// document.addEventListener("DOMContentLoaded", () => {
-//   const sr = ScrollReveal({
-//     origin: "top",
-//     distance: "60px",
-//     duration: 2000,
-//     delay: 200,
-//   });
-//   sr.reveal(".main-text, .info");
-//   sr.reveal(".img-list .image-container", { interval: 100 });
-// });
 window.addEventListener('load', () => {
   const sr = ScrollReveal({
     origin: "top",
@@ -41,5 +31,6 @@ window.addEventListener('load', () => {
     duration: 2000,
     delay: 200,
   });
+  sr.reveal(".main-text, .info");
   sr.reveal(".image-container", { interval: 100 });
 });

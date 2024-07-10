@@ -29,12 +29,12 @@ if (selectedProject) {
 
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('load', () => {
   const sr = ScrollReveal({
     origin: "top",
     distance: "60px",
     duration: 2000,
     delay: 200,
   });
-  sr.reveal(".project-details-container, .image-container", { interval: 100 });
+  sr.reveal(".image-container", { interval: 100 });
 });
