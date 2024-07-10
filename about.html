@@ -24,7 +24,7 @@
                 <a
                   href="./"
                   class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Dashboard</a
+                  >Projects</a
                 >
                 <a
                   href="./about.html"
@@ -74,7 +74,7 @@
           <a
             href="./"
             class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Dashboard</a
+            >Projects</a
           >
           <a
             href="./about.html"
@@ -221,7 +221,7 @@
                 <div class="mt-3 sm:mt-0">
                   <div>
                     <ul class="flex gap-10 items-center">
-                      <li class="font-semibold hover:text-slate-500"><a href="./">Dashboard</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./">Projects</a></li>
                       <li class="font-semibold hover:text-slate-500"><a href="./about.html">About</a></li>
                     </ul>
                   </div>
@@ -321,13 +321,19 @@
     <script src="./src/assets/js/common.js"></script>
     <script>
       /*===== SCROLL REVEAL ANIMATION =====*/
-      const sr = ScrollReveal({
+      window.addEventListener('load', () => {
+        const sr = ScrollReveal({
         origin: "top",
         distance: "60px",
         duration: 2000,
         delay: 200,
+        beforeReveal: (el) => {
+          el.style.opacity = 1;
+          el.style.visibility = 'visible';
+        }
+        });
+        sr.reveal(".about");
       });
-      sr.reveal(".about");
     </script>
   </body>
 </html>

@@ -30,7 +30,11 @@ window.addEventListener('load', () => {
     distance: "60px",
     duration: 2000,
     delay: 200,
+    beforeReveal: (el) => {
+      el.style.opacity = 1;
+      el.style.visibility = 'visible';
+    }
   });
   sr.reveal(".main-text, .info");
-  sr.reveal(".image-container", { interval: 100 });
+  sr.reveal(".img-list .image-container", { interval: 100 });
 });

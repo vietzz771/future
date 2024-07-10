@@ -90,3 +90,11 @@
 img {
   max-width: 100%;
 }
+.image-container {
+  opacity: 0;
+  visibility: hidden;
+}
+.about {
+  opacity: 0;
+  visibility: hidden;
+}
