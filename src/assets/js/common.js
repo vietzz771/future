@@ -1,4 +1,4 @@
-// Toggle mobile menu
+// Toggle mobile menu, overlay body
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -22,7 +22,10 @@ mobileMenuButton.addEventListener("click", () => {
   overlay.classList.toggle("overlay");
 });
 
+// Get year for copyright
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Add border bottom for fixed navbar
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
   if (window.scrollY > 0) {

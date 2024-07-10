@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/output.css" rel="stylesheet" />
-    <link href="styles/custom.css" rel="stylesheet" />
+    <link href="./src/assets/styles/custom.css" rel="stylesheet" />
+    <link href="./src/assets/styles/styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -15,16 +15,12 @@
       <div class="mx-auto max-w-full px-5 sm:px-5 lg:px-16">
         <div class="flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center">
+            <div class="flex flex-shrink-0 items-center img-logo">
               <a href="./">
-                <img
-                  class="h-8 w-auto ml-11 sm:ml-0"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Future Studio"
-                />
+                <img class="h-8 w-auto ml-11 sm:ml-0" src="./src/assets/images/Logo.png" alt="Future Studio" />
               </a>
             </div>
-            <div class="hidden sm:ml-6 sm:block">
+            <div class="hidden sm:ml-6 sm:block self-center">
               <div class="flex space-x-4">
                 <a
                   href="./"
@@ -32,14 +28,8 @@
                   >Dashboard</a
                 >
                 <a
-                  href="./work"
-                  class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white"
-                  aria-current="page"
-                  >Work</a
-                >
-                <a
-                  href="./about"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
+                  href="./about.html"
+                  class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
                   >About</a
                 >
               </div>
@@ -87,13 +77,7 @@
             >Dashboard</a
           >
           <a
-            href="./work"
-            class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white"
-            aria-current="page"
-            >Work</a
-          >
-          <a
-            href="./about"
+            href="./about.html"
             class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
             >About</a
           >
@@ -103,85 +87,9 @@
     <div id="overlay">
       <section class="pt-[99px] xl:pt-[139px]">
         <div class="container">
-          <div id="gallery-wrap-work" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5">
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Control Center</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Mug Shot</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Off the grid</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Neat</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/14693870/file/original-4cc056c9a4b905793a568a232bc154d7.png?resize=1200x9000"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/14693870/file/original-4cc056c9a4b905793a568a232bc154d7.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Spell</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/12831495/file/original-46b46cdabd610550bf5554b96dfbcd21.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/12831495/file/original-46b46cdabd610550bf5554b96dfbcd21.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Polka Drawer</div>
-            </div>
+          <div id="project-details-container">
+            <h1 id="project-name" class="text-center font-semibold text-[32px] title-text"></h1>
+            <div id="gallery-wrap-work" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-5"></div>
           </div>
         </div>
       </section>
@@ -191,19 +99,15 @@
             <div>
               <div class="flex justify-between items-center flex-col sm:flex-row">
                 <div>
-                  <div class="h-32 w-32">
-                    <img
-                      src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
-                      alt=""
-                    />
+                  <div>
+                    <a href="./"><img class="h-8 w-auto" src="./src/assets/images/Logo.png" alt="Future Studio" /></a>
                   </div>
                 </div>
-                <div>
+                <div class="mt-3 sm:mt-0">
                   <div>
                     <ul class="flex gap-10 items-center">
                       <li class="font-semibold hover:text-slate-500"><a href="./">Dashboard</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./work">Work</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./about">About</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./about.html">About</a></li>
                     </ul>
                   </div>
                 </div>
@@ -285,7 +189,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex-1 border-t-2 mt-3 sm:mt-0"></div>
+              <div class="flex-1 border-t-2 mt-3"></div>
               <div class="mt-5 flex justify-between items-center flex-col sm:flex-row">
                 <p class="text-slate-500">&copy;&nbsp;<span id="year"></span> Future Studio. All rights reserved.</p>
                 <div class="flex justify-between items-center gap-x-6 text-slate-500 mt-3 sm:mt-0">
@@ -298,7 +202,9 @@
         </section>
       </footer>
     </div>
-    <script src="./main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./src/assets/js/common.js"></script>
+    <script type="module" src="./src/assets/js/work.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
       Fancybox.bind(document.getElementById("gallery-wrap-work"), "[data-fancybox]", {

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/output.css" rel="stylesheet" />
-    <link href="styles/custom.css" rel="stylesheet" />
+    <link href="./src/assets/styles/styles.css" rel="stylesheet" />
+    <link href="./src/assets/styles/custom.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -15,24 +15,15 @@
       <div class="mx-auto max-w-full px-5 sm:px-5 lg:px-16">
         <div class="flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center">
+            <div class="flex flex-shrink-0 items-center img-logo">
               <a href="./">
-                <img
-                  class="h-8 w-auto ml-11 sm:ml-0"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Future Studio"
-                />
+                <img class="h-8 w-auto ml-11 sm:ml-0" src="./src/assets/images/Logo.png" alt="Future Studio" />
               </a>
             </div>
-            <div class="hidden sm:ml-6 sm:block">
+            <div class="hidden sm:ml-6 sm:block self-center">
               <div class="flex space-x-4">
                 <a href="./" class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white" aria-current="page"
                   >Dashboard</a
-                >
-                <a
-                  href="./work.html"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Work</a
                 >
                 <a
                   href="./about.html"
@@ -82,12 +73,7 @@
             >Dashboard</a
           >
           <a
-            href="./work"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Work</a
-          >
-          <a
-            href="./about"
+            href="./about.html"
             class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
             >About</a
           >
@@ -95,79 +81,20 @@
       </div>
     </nav>
     <div id="overlay">
-      <section class="lg:pt-[99px] xl:pt-[139px]">
-        <div class="container-carousel relative">
-          <div>
-            <h1 class="text-[24px] font-bold">3D Studio</h1>
+      <section class="pt-[99px] xl:pt-[139px]">
+        <div class="container text-center main-text">
+          <div class="mx-[20px] md:mx-[50px] lg:mx-[190px]">
+            <h1 class="text-[48px] md:text-[72px] leading-none">The world’s destination for design</h1>
           </div>
-          <div class="flex justify-between items-center mt-5">
-            <div class="flex items-center gap-x-5">
-              <div class="border-slate-50 rounded-full bg-slate-50 border-[6px]">
-                <img
-                  src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
-                  alt=""
-                  class="h-12 w-12 rounded-full"
-                />
-              </div>
-              <div>
-                <h2 class="font-semibold">Future Studio</h2>
-                <div class="flex items-center">
-                  <p class="flex items-center text-sm font-medium gap-x-2 text-[#4daa57]">
-                    <button class="circle-pulse"></button> Available for work
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="h-10 w-10 rounded-full border-slate-100 border-2 hover:bg-gray-200 cursor-pointer">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-2">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M8.96173 18.9109L9.42605 18.3219L8.96173 18.9109ZM12 5.50063L11.4596 6.02073C11.601 6.16763 11.7961 6.25063 12 6.25063C12.2039 6.25063 12.399 6.16763 12.5404 6.02073L12 5.50063ZM15.0383 18.9109L15.5026 19.4999L15.0383 18.9109ZM9.42605 18.3219C7.91039 17.1271 6.25307 15.9603 4.93829 14.4798C3.64922 13.0282 2.75 11.3345 2.75 9.1371H1.25C1.25 11.8026 2.3605 13.8361 3.81672 15.4758C5.24723 17.0866 7.07077 18.3752 8.49742 19.4999L9.42605 18.3219ZM2.75 9.1371C2.75 6.98623 3.96537 5.18252 5.62436 4.42419C7.23607 3.68748 9.40166 3.88258 11.4596 6.02073L12.5404 4.98053C10.0985 2.44352 7.26409 2.02539 5.00076 3.05996C2.78471 4.07292 1.25 6.42503 1.25 9.1371H2.75ZM8.49742 19.4999C9.00965 19.9037 9.55954 20.3343 10.1168 20.6599C10.6739 20.9854 11.3096 21.25 12 21.25V19.75C11.6904 19.75 11.3261 19.6293 10.8736 19.3648C10.4213 19.1005 9.95208 18.7366 9.42605 18.3219L8.49742 19.4999ZM15.5026 19.4999C16.9292 18.3752 18.7528 17.0866 20.1833 15.4758C21.6395 13.8361 22.75 11.8026 22.75 9.1371H21.25C21.25 11.3345 20.3508 13.0282 19.0617 14.4798C17.7469 15.9603 16.0896 17.1271 14.574 18.3219L15.5026 19.4999ZM22.75 9.1371C22.75 6.42503 21.2153 4.07292 18.9992 3.05996C16.7359 2.02539 13.9015 2.44352 11.4596 4.98053L12.5404 6.02073C14.5983 3.88258 16.7639 3.68748 18.3756 4.42419C20.0346 5.18252 21.25 6.98623 21.25 9.1371H22.75ZM14.574 18.3219C14.0479 18.7366 13.5787 19.1005 13.1264 19.3648C12.6739 19.6293 12.3096 19.75 12 19.75V21.25C12.6904 21.25 13.3261 20.9854 13.8832 20.6599C14.4405 20.3343 14.9903 19.9037 15.5026 19.4999L14.574 18.3219Z"
-                      fill="#1C274C"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="swiper default-carousel swiper-container relative mt-5 rounded-lg inline-block">
-            <div class="swiper-wrapper rounded-lg">
-              <div class="swiper-slide rounded-lg">
-                <div class="bg-indigo-50 rounded-lg flex justify-center items-center">
-                  <img
-                    src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/344896183_1313918675867362_9089639568780931059_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=htq7yKqF3LoQ7kNvgFmVvD5&_nc_ht=scontent.fdad1-1.fna&cb_e2o_trans=q&oh=00_AYDTtpDFx2AsG3zCZV1g2qIGLdFKXltcmWjOcLpoqI3nPg&oe=668E2459"
-                    alt=""
-                    class="object-cover rounded-lg"
-                  />
-                </div>
-              </div>
-              <div class="swiper-slide rounded-lg">
-                <div class="bg-indigo-50 rounded-lg flex justify-center items-center">
-                  <img
-                    src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/344770238_1327947444734207_6692405449724070865_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7PwFHk9W7_EQ7kNvgEZTkgc&_nc_ht=scontent.fdad1-2.fna&cb_e2o_trans=q&oh=00_AYBGP88xCAIlbSKqdBOX56pZRI36IKeO7MYCv9yUkxlhFQ&oe=668E4439"
-                    alt=""
-                    class="object-cover rounded-lg"
-                  />
-                </div>
-              </div>
-              <div class="swiper-slide rounded-lg">
-                <div class="bg-indigo-50 rounded-lg flex justify-center items-center">
-                  <img
-                    src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/344805230_150028107866702_4641323448170945170_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_p_AmVvfLSkQ7kNvgG3FFrK&_nc_ht=scontent.fdad1-3.fna&cb_e2o_trans=q&gid=AeoKuB_-9_FfZk025oqHAE4&oh=00_AYBDIb9xkW-S-4nR5REyPpAHiWNz0w1WcsiKep6L6dMdMg&oe=668E1D2E"
-                    alt=""
-                    class="object-cover rounded-lg"
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="mt-8">
+            <h2 class="text-[18px] sm:text-[20px]">
+              Get inspired by the work of millions of top-rated designers & agencies around the world.
+            </h2>
           </div>
         </div>
       </section>
-      <section>
-        <div class="container">
+      <section class="pt-0">
+        <div class="container info">
           <div class="flex justify-between items-center mb-4">
             <div class="flex-1 border-t-2"></div>
             <div class="mx-4">
@@ -186,215 +113,11 @@
             <p class="text-slate-500 text-sm">Welcome to my design</p>
           </div>
         </div>
-        <div class="container mt-[50px]">
-          <div class="flex justify-between">
-            <h2 class="font-semibold">More by Future Studio</h2>
-            <a href="./work"><p class="text-sm hover:font-semibold">View profile</p></a>
-          </div>
-          <div id="gallery-wrap" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/11813092/file/original-e245068360275f2bc3615d1dd22b3ece.png?resize=1024x768"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Control Center</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/11751330/file/original-a4ea113078f78aadede08b91d7134ea5.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Mug Shot</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/15029520/file/original-6c407c38f880c521145dce24fe51f6ea.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Off the grid</div>
-            </div>
-            <div class="image-container rounded-lg">
-              <a
-                data-fancybox="gallery"
-                data-src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
-              >
-                <img
-                  src="https://cdn.dribbble.com/userupload/15431847/file/original-ae1dbf6ac7602fa192bf05c451857ef8.png?resize=1200x900"
-                  alt=""
-                  class="rounded-lg cursor-pointer"
-                />
-              </a>
-              <div class="image-title">Neat</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mx-auto py-8">
-        <div class="slider-bottom">
-          <div class="slider-card" id="slider-card">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15243264/file/original-eb527e4736c1c98e64f865d8213c6552.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Print</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15391219/file/original-9e3ed9a7093512a4fae7831555c51be4.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 2"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Web design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15353266/file/original-46da744a050a94f5b2ca6503ad908394.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 3"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Product Design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15292209/file/still-6273f93ed581484d34fec1a438671c9c.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 4"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Animation</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15300569/file/original-5e15610d21a4ffa94d811f7026c2e4b9.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 5"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Typography</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15185043/file/original-3c7feee677485a02a8a3b501e6422041.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Branding</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15243264/file/original-eb527e4736c1c98e64f865d8213c6552.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Print</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15391219/file/original-9e3ed9a7093512a4fae7831555c51be4.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 2"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Web design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15353266/file/original-46da744a050a94f5b2ca6503ad908394.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 3"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Product Design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15292209/file/still-6273f93ed581484d34fec1a438671c9c.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 4"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Animation</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15300569/file/original-5e15610d21a4ffa94d811f7026c2e4b9.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 5"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Typography</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15185043/file/original-3c7feee677485a02a8a3b501e6422041.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Branding</h2>
-              </div>
-            </div>
-          </div>
+        <div class="container mt-[50px] img-list">
+          <div
+            id="projects-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5"
+          ></div>
         </div>
       </section>
       <footer>
@@ -403,19 +126,15 @@
             <div>
               <div class="flex justify-between items-center flex-col sm:flex-row">
                 <div>
-                  <div class="h-32 w-32">
-                    <img
-                      src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
-                      alt=""
-                    />
+                  <div>
+                    <a href="./"><img class="h-8 w-auto" src="./src/assets/images/Logo.png" alt="Future Studio" /></a>
                   </div>
                 </div>
-                <div>
+                <div class="mt-3 sm:mt-0">
                   <div>
                     <ul class="flex gap-10 items-center">
                       <li class="font-semibold hover:text-slate-500"><a href="./">Dashboard</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./work">Work</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./about">About</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./about.html">About</a></li>
                     </ul>
                   </div>
                 </div>
@@ -497,7 +216,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex-1 border-t-2 mt-3 sm:mt-0"></div>
+              <div class="flex-1 border-t-2 mt-3"></div>
               <div class="mt-5 flex justify-between items-center flex-col sm:flex-row">
                 <p class="text-slate-500">&copy;&nbsp;<span id="year"></span> Future Studio. All rights reserved.</p>
                 <div class="flex justify-between items-center gap-x-6 text-slate-500 mt-3 sm:mt-0">
@@ -510,7 +229,9 @@
         </section>
       </footer>
     </div>
-    <script src="./main.js"></script>
+    <script type="module" src="./src/assets/js/main.js"></script>
+    <script src="./src/assets/js/common.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>

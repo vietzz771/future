@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/output.css" rel="stylesheet" />
-    <link href="styles/custom.css" rel="stylesheet" />
+    <link href="./src/assets/styles/custom.css" rel="stylesheet" />
+    <link href="./src/assets/styles/styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Future Studio</title>
@@ -14,29 +14,20 @@
       <div class="mx-auto max-w-full px-5 sm:px-5 lg:px-16">
         <div class="flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center">
+            <div class="flex flex-shrink-0 items-center img-logo">
               <a href="./">
-                <img
-                  class="h-8 w-auto ml-11 sm:ml-0"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Future Studio"
-                />
+                <img class="h-8 w-auto ml-11 sm:ml-0" src="./src/assets/images/Logo.png" alt="Future Studio" />
               </a>
             </div>
-            <div class="hidden sm:ml-6 sm:block">
+            <div class="hidden sm:ml-6 sm:block self-center">
               <div class="flex space-x-4">
                 <a
                   href="./"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
+                  class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
                   >Dashboard</a
                 >
                 <a
-                  href="./work"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Work</a
-                >
-                <a
-                  href="./about"
+                  href="./about.html"
                   class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white"
                   aria-current="page"
                   >About</a
@@ -86,12 +77,7 @@
             >Dashboard</a
           >
           <a
-            href="./work"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Work</a
-          >
-          <a
-            href="./about"
+            href="./about.html"
             class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >About</a
@@ -101,7 +87,7 @@
     </nav>
     <div id="overlay">
       <section class="pt-[99px] xl:pt-[139px]">
-        <div class="container lg:px-[150px] xl:px-[200px]">
+        <div class="container lg:px-[150px] xl:px-[200px] about">
           <div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
               <div>
@@ -116,37 +102,7 @@
                   <h2 class="font-semibold text-2xl">Biography</h2>
                   <p class="mt-3">3D Illustrator</p>
                 </div>
-                <div class="mt-5">
-                  <h2 class="font-semibold text-2xl">Tags</h2>
-                  <ul class="mt-3">
-                    <li
-                      class="inline-block rounded-md px-3 py-2 text-sm text-black bg-[#fafafb] hover:bg-gray-300 cursor-pointer hover:text-black"
-                    >
-                      3d artist
-                    </li>
-                    <li
-                      class="ml-3 inline-block rounded-md px-3 py-2 text-sm text-black bg-[#fafafb] hover:bg-gray-300 cursor-pointer hover:text-black"
-                    >
-                      3d graphics
-                    </li>
-                    <li
-                      class="mx-3 inline-block rounded-md px-3 py-2 text-sm text-black bg-[#fafafb] hover:bg-gray-300 cursor-pointer hover:text-black"
-                    >
-                      3d illustration
-                    </li>
-                    <li
-                      class="inline-block rounded-md px-3 py-2 text-sm text-black bg-[#fafafb] hover:bg-gray-300 cursor-pointer hover:text-black"
-                    >
-                      character design
-                    </li>
-                    <li
-                      class="mt-3 inline-block rounded-md px-3 py-2 text-sm text-black bg-[#fafafb] hover:bg-gray-300 cursor-pointer hover:text-black"
-                    >
-                      3d modeling and rendering
-                    </li>
-                  </ul>
-                </div>
-                <div class="border-t-2 mt-8"></div>
+                <div class="sm:border-t-2 sm:mt-8"></div>
               </div>
               <div>
                 <div class="bg-[#fafafb] rounded-xl">
@@ -252,175 +208,21 @@
           </div>
         </div>
       </section>
-      <section class="mx-auto py-8">
-        <div class="slider-bottom">
-          <div class="slider-card" id="slider-card">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15243264/file/original-eb527e4736c1c98e64f865d8213c6552.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Print</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15391219/file/original-9e3ed9a7093512a4fae7831555c51be4.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 2"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Web design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15353266/file/original-46da744a050a94f5b2ca6503ad908394.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 3"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Product Design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15292209/file/still-6273f93ed581484d34fec1a438671c9c.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 4"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Animation</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15300569/file/original-5e15610d21a4ffa94d811f7026c2e4b9.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 5"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Typography</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15185043/file/original-3c7feee677485a02a8a3b501e6422041.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Branding</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15243264/file/original-eb527e4736c1c98e64f865d8213c6552.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Print</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15391219/file/original-9e3ed9a7093512a4fae7831555c51be4.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 2"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Web design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15353266/file/original-46da744a050a94f5b2ca6503ad908394.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 3"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Product Design</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15292209/file/still-6273f93ed581484d34fec1a438671c9c.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 4"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Animation</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15300569/file/original-5e15610d21a4ffa94d811f7026c2e4b9.png?format=webp&resize=200x150&vertical=center"
-                  alt="Image 5"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Typography</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://cdn.dribbble.com/userupload/15185043/file/original-3c7feee677485a02a8a3b501e6422041.jpg?format=webp&resize=200x150&vertical=center"
-                  alt="Image 1"
-                  class="rounded-lg"
-                />
-              </div>
-              <div class="card-body">
-                <h2 class="font-semibold">Branding</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <footer>
         <section class="pt-[35px] pb-[15px] sm:py-[35px]">
           <div class="container">
             <div>
               <div class="flex justify-between items-center flex-col sm:flex-row">
                 <div>
-                  <div class="h-32 w-32">
-                    <img
-                      src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/287073174_112974384768466_3422282068982536559_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=wQvHQ_kyEXwQ7kNvgEqcwHt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=q&oh=00_AYDLuEKYr0EAxHucLLiBmKZ1XZBgqjnsCiqrps5PQ0929A&oe=668EA4BD"
-                      alt=""
-                    />
+                  <div>
+                    <a href="./"><img class="h-8 w-auto" src="./src/assets/images/Logo.png" alt="Future Studio" /></a>
                   </div>
                 </div>
-                <div>
+                <div class="mt-3 sm:mt-0">
                   <div>
                     <ul class="flex gap-10 items-center">
                       <li class="font-semibold hover:text-slate-500"><a href="./">Dashboard</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./work">Work</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./about">About</a></li>
+                      <li class="font-semibold hover:text-slate-500"><a href="./about.html">About</a></li>
                     </ul>
                   </div>
                 </div>
@@ -502,7 +304,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex-1 border-t-2 mt-3 sm:mt-0"></div>
+              <div class="flex-1 border-t-2 mt-3"></div>
               <div class="mt-5 flex justify-between items-center flex-col sm:flex-row">
                 <p class="text-slate-500">&copy;&nbsp;<span id="year"></span> Future Studio. All rights reserved.</p>
                 <div class="flex justify-between items-center gap-x-6 text-slate-500 mt-3 sm:mt-0">
@@ -515,6 +317,19 @@
         </section>
       </footer>
     </div>
-    <script src="./main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./src/assets/js/common.js"></script>
+    <script>
+      /*===== SCROLL REVEAL ANIMATION =====*/
+      const sr = ScrollReveal({
+        origin: "top",
+        distance: "60px",
+        duration: 2000,
+        delay: 200,
+      });
+      sr.reveal(".about", {
+        delay: 200,
+      });
+    </script>
   </body>
 </html>
