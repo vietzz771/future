@@ -35,6 +35,5 @@ window.addEventListener('load', () => {
       el.style.visibility = 'visible';
     }
   });
-  sr.reveal(".main-text, .info");
   sr.reveal(".img-list .image-container", { interval: 100 });
 });
