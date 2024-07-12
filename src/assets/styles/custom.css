@@ -102,6 +102,10 @@ img {
   opacity: 0;
   visibility: hidden;
 }
+.partner-sr{
+  opacity: 0;
+  visibility: hidden;
+}
 .about {
   opacity: 0;
   visibility: hidden;
