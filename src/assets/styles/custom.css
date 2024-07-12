@@ -94,7 +94,38 @@ img {
   opacity: 0;
   visibility: hidden;
 }
+.partners-container {
+  opacity: 0;
+  visibility: hidden;
+}
 .about {
   opacity: 0;
   visibility: hidden;
+}
+.yt-embed {
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  pointer-events: none;
+}
+.yt-embed iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+}
+.partner-content {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.visible {
+  visibility: visible;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }

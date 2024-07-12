@@ -6,6 +6,8 @@ if (selectedProject) {
   const projectImagesContainer = document.getElementById("gallery-wrap-work");
 
   projectNameElement.textContent = selectedProject.name;
+  // Set the page title
+  document.title = `Future Studio | ${selectedProject.name}`;
 
   selectedProject.images.forEach((image) => {
     console.log(image);
@@ -27,9 +29,8 @@ if (selectedProject) {
   document.getElementById("project-details-container").textContent = "Không có thông tin dự án được chọn.";
 }
 
-
 /*===== SCROLL REVEAL ANIMATION =====*/
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   const sr = ScrollReveal({
     origin: "top",
     distance: "60px",
@@ -37,8 +38,8 @@ window.addEventListener('load', () => {
     delay: 200,
     beforeReveal: (el) => {
       el.style.opacity = 1;
-      el.style.visibility = 'visible';
-    }
+      el.style.visibility = "visible";
+    },
   });
-  sr.reveal(".image-container", { interval: 100 });
+  sr.reveal(".image-container, #project-name", { interval: 100 });
 });
