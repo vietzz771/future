@@ -29,5 +29,5 @@ window.addEventListener("load", () => {
       el.style.visibility = "visible";
     },
   });
-  sr.reveal(".partner-list .partner-content, .title-text, .partner-sr", { interval: 100 });
+  sr.reveal(".partner-list, .partner-content, .title-text, .partner-sr", { interval: 100 });
 });
