@@ -6,7 +6,7 @@ const partnersContainer = document.getElementById("partners-container");
 partners.forEach((partner) => {
   const partnersElement = document.createElement("div");
   partnersElement.classList.add("partner-content", "rounded-lg");
-  partnersElement.innerHTML = `<div class="flex flex-col items-center py-4 partner-sr">
+  partnersElement.innerHTML = `<div class="flex flex-col items-center py-4">
                 <div class="partner-img">
                   <img src="${partner.coverImage}" alt="${partner.name}" class="w-40 h-40 rounded-full object-cover" />
                 </div>
@@ -29,5 +29,5 @@ window.addEventListener("load", () => {
       el.style.visibility = "visible";
     },
   });
-  sr.reveal(".partner-list, .partner-content, .title-text, .partner-sr, .p-sr", { interval: 100 });
+  sr.reveal(".partner-list, .partner-content, .title-text", { interval: 100 });
 });
