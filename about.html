@@ -7,7 +7,7 @@
     <link href="./src/assets/styles/styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>Future Studio | About</title>
+    <title>Future Studio</title>
   </head>
   <body>
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white">
@@ -25,11 +25,6 @@
                   href="./"
                   class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
                   >Projects</a
-                >
-                <a
-                  href="./partnership.html"
-                  class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
-                  >Partnerships</a
                 >
                 <a
                   href="./about.html"
@@ -80,11 +75,6 @@
             href="./"
             class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
             >Projects</a
-          >
-          <a
-            href="./partnership.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
-            >Partnerships</a
           >
           <a
             href="./about.html"
@@ -232,7 +222,6 @@
                   <div>
                     <ul class="flex gap-10 items-center">
                       <li class="font-semibold hover:text-slate-500"><a href="./">Projects</a></li>
-                      <li class="font-semibold hover:text-slate-500"><a href="./partnership.html">Partnerships</a></li>
                       <li class="font-semibold hover:text-slate-500"><a href="./about.html">About</a></li>
                     </ul>
                   </div>
@@ -332,16 +321,16 @@
     <script src="./src/assets/js/common.js"></script>
     <script>
       /*===== SCROLL REVEAL ANIMATION =====*/
-      window.addEventListener("load", () => {
+      window.addEventListener('load', () => {
         const sr = ScrollReveal({
-          origin: "top",
-          distance: "60px",
-          duration: 2000,
-          delay: 200,
-          beforeReveal: (el) => {
-            el.style.opacity = 1;
-            el.style.visibility = "visible";
-          },
+        origin: "top",
+        distance: "60px",
+        duration: 2000,
+        delay: 200,
+        beforeReveal: (el) => {
+          el.style.opacity = 1;
+          el.style.visibility = 'visible';
+        }
         });
         sr.reveal(".about");
       });
