@@ -3,11 +3,7 @@ export const projects = [
     id: 1,
     name: "Neat",
     coverImage: "./src/assets/images/neat.png",
-    images: [
-      "./src/assets/images/neat.png",
-      "./src/assets/images/moment.png",
-      "./src/assets/images/mugshot.png"
-    ],
+    images: ["./src/assets/images/neat.png", "./src/assets/images/moment.png", "./src/assets/images/mugshot.png"],
   },
   {
     id: 2,
@@ -42,7 +38,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -53,7 +49,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -64,7 +60,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 7,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -75,7 +71,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 8,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -86,7 +82,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 9,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -97,7 +93,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 10,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -108,7 +104,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 11,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -119,7 +115,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 12,
     name: "Polka Drawer",
     coverImage: "./src/assets/images/polkadrawer.png",
     images: [
@@ -128,5 +124,33 @@ export const projects = [
       "./src/assets/images/spell.png",
       "./src/assets/images/moment.png"
     ],
-  }
+  },
+];
+
+export const partners = [
+  {
+    id: 1,
+    name: "Neat",
+    coverImage: "./src/assets/images/neat.png",
+  },
+  {
+    id: 2,
+    name: "Mug Shot",
+    coverImage: "./src/assets/images/mugshot.png",
+  },
+  {
+    id: 3,
+    name: "Control Center",
+    coverImage: "./src/assets/images/controlcenter.png",
+  },
+  {
+    id: 4,
+    name: "Polka Drawer",
+    coverImage: "./src/assets/images/polkadrawer.png",
+  },
+  {
+    id: 5,
+    name: "Polka Drawer",
+    coverImage: "./src/assets/images/polkadrawer.png",
+  },
 ];

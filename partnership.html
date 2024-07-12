@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./src/assets/styles/styles.css" rel="stylesheet" />
     <link href="./src/assets/styles/custom.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-    <title>Future Studio</title>
+    <link href="./src/assets/styles/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Future Studio | Partnerships</title>
   </head>
   <body>
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white">
@@ -20,12 +21,15 @@
             </div>
             <div class="hidden sm:ml-6 sm:block self-center">
               <div class="flex space-x-4">
-                <a href="./" class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white" aria-current="page"
+                <a
+                  href="./"
+                  class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
                   >Projects</a
                 >
                 <a
                   href="./partnership.html"
-                  class="link rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black"
+                  class="rounded-md bg-black px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page"
                   >Partnerships</a
                 >
                 <a
@@ -72,12 +76,15 @@
       <!-- Mobile menu, show/hide based on menu state. -->
       <div class="hidden sm:hidden border-t-2" id="mobile-menu">
         <div class="space-y-1 px-5 pb-3 pt-2">
-          <a href="./" class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white" aria-current="page"
+          <a
+            href="./"
+            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
             >Projects</a
           >
           <a
             href="./partnership.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black"
+            class="block rounded-md bg-black px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
             >Partnerships</a
           >
           <a
@@ -89,30 +96,12 @@
       </div>
     </nav>
     <div id="overlay">
-      <section class="">
-        <div class="container mt-[50px] img-list">
-          <div
-            id="projects-container"
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-5"
-          ></div>
+      <section class="pt-[99px] xl:pt-[139px]">
+        <div class="container">
+          <h1 class="text-center font-semibold text-[32px] title-text">Partnerships</h1>
+          <div id="partners-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-5"></div>
         </div>
       </section>
-      <!-- <section>
-        <div class="container">
-          <div class="yt-embed">
-            <iframe
-              width="853"
-              height="480"
-              src="https://www.youtube.com/embed/Fi0QhiD9vbg?autoplay=1&controls=0&loop=1&modestbranding=1&rel=0&color=white&playsinline=1&enablejsapi=1&playlist=Fi0QhiD9vbg"
-              title="aa"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </section> -->
       <footer>
         <section class="pt-[35px] pb-[15px] sm:py-[35px]">
           <div class="container">
@@ -224,13 +213,7 @@
       </footer>
     </div>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="module" src="./src/assets/js/main.js"></script>
     <script src="./src/assets/js/common.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind(document.getElementById("gallery-wrap"), "[data-fancybox]", {
-        wheel: "slide",
-      });
-    </script>
+    <script type="module" src="./src/assets/js/partner.js"></script>
   </body>
 </html>
